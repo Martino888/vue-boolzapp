@@ -1,30 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>vue-boolzapp</title>
 </head>
+
 <body>
-    <div id="app">
-        <header>
-            <div class="bk-green"></div>
-        </header>
-        <main></main>
-        <footer></footer>
-        
-        <div class="bk-grey"></div>
+    <div class="app">
+        <div class="box-left">
+            <div class="nav-right">
+                <div class="rounded">
+                    <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                </div>
+                <span class="text-box">
+                    <span class="text-boxname">Martino</span>
+                </span>
+                <div class="top-bar">
+                    <div class="btn" role="button"><i class="fa-solid fa-circle-notch"></i></div>
+                    <div class="btn" role="button">
+                        <span class="material-icons">chat_bubble</span>
+                    </div>
+                    <div class="btn" role="button">
+                        <span class="material-icons">more_vert</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-down">
+                <div class="rounded">
+                    <span class="material-icons mute">notifications_off</span>
+                </div>
+                <span class="text-box">
+                    <span class="text-boxname">Ricevi notifiche di nuovi messaggi</span>
+                    <a class="attiva-not" href="#">Attiva notifiche desktop</a>
+                </span>
+            </div>
+            <input class="input-in" type=" text" placeholder="Cerca o inizia una nuova chat">
+            <div class="input-cerca">
+                
+            </div>
+            <div class="utenti">
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Michele</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Fabio</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Samuele</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Alessandro B.</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Alessandro L.</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Claudia</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Federico</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                <div class="utenti-in">
+                    <div class="rounded">
+                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+                    </div>
+                    <span class="text-box">
+                        <span class="text-boxname">Davide</span>
+                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="box-right">
+            <div class="nav-left"></div>
+            <div></div>
+
+        </div>
     </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
