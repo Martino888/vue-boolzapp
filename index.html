@@ -1,178 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <title>vue-boolzapp</title>
+    <title>Boolzapp</title>
 </head>
 
 <body>
-    <div class="app">
-        <div class="box-left">
-            <div class="nav-right">
-                <div class="rounded">
-                    <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
+    <div id="app" class="container">
+        <!-- contenitore sx -->
+        <div class="left">
+            <div class="header-left">
+                <div class="header-left-logo">
+                    <img src="img/avatar_1.jpg" alt="Nome Utente">
+                    <h3>Nome Utente</h3>
                 </div>
-                <span class="text-box">
-                    <span class="text-boxname">Martino</span>
-                </span>
-                <div class="top-bar">
-                    <div class="btn" role="button">
-                        <i class="fa-solid fa-circle-notch"></i>
-                    </div>
-                    <div class="btn" role="button">
-                        <span class="material-icons">chat_bubble</span>
-                    </div>
-                    <div class="btn" role="button">
-                        <span class="material-icons">more_vert</span>
-                    </div>
+                <div class="header-left-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <div class="nav-down">
-                <div class="rounded">
-                    <span class="material-icons mute">notifications_off</span>
+            <div class="left-disclaimer">
+                <div class="left-disclaimer-logo">
+                    <i class="fa fa-bell-slash" aria-hidden="true"></i>
                 </div>
-                <span class="text-box">
-                    <span class="text-boxname">Ricevi notifiche di nuovi messaggi</span>
-                    <a class="attiva-not" href="#">Attiva notifiche desktop</a>
-                </span>
+                <div class="left-disclaimer-text">
+                    <h3>Ricevi notifiche di nuovi messaggi</h3>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
             </div>
-            <input class="input-in" type=" text" placeholder=" Cerca o inizia una nuova chat">
-            <div class="input-cerca">
-
+            <div class="left-searchbar">
+                <label class="search-label" for="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <input id="contacts-filter" class="left-searchbar-input" placeholder="Cerca o inizia una nuova chat"
+                    name="search">
             </div>
-            <div class="utenti">
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_1.jpg" alt="my profile pic">
+            <div class="contacts">
+                <div class="contact active">
+                    <div class="contact-logo">
+                        <img src="img/avatar_2.jpg" alt="Michele">
                     </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Michele</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_2.jpg" alt="my profile pic">
+                    <div class="contact-info">
+                        <h3>
+                            <span class="contact-name">Michele</span>
+                            <span class="time f-right">
+                                10/01/2020 16:15:22
+                            </span>
+                        </h3>
+                        <small>Tutto fatto! ...</small>
                     </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Fabio</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_3.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Samuele</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_4.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Alessandro B.</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_5.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Alessandro L.</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_6.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Claudia</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_7.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Federico</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
-                </div>
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_8.jpg" alt="my profile pic">
-                    </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Davide</span>
-                        <span class="attiva-not" href="#">Ultimo messaggio inviato</span>
-                    </span>
                 </div>
 
-            </div>
-        </div>
-
-
-        <div class="box-right">
-            <div class="nav-left">
-                <div class="utenti-in">
-                    <div class="rounded">
-                        <img class="img-in-rounded" src="img/avatar_1.jpg" alt="my profile pic">
+                <div class="contact">
+                    <div class="contact-logo">
+                        <img src="img/avatar_3.jpg" alt="Fabio">
                     </div>
-                    <span class="text-box">
-                        <span class="text-boxname">Michele</span>
-                        <span class="attiva-not" href="#">Ultimo accesso oggi alle 12:00</span>
-                    </span>
-                    <div class="top-bar">
-                        <div class="btn" role="button">
-                            <span class="material-icons">search</span>
-                        </div>
-                        <div class="btn" role="button">
-                            <span class="material-icons">attach_file</span>
-                        </div>
-                        <div class="btn" role="button">
-                            <span class="material-icons">more_vert</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-chat">
-                
-            </div>
-            <div class="nav-input">
-                    <div class="btn" role="button">
-                        <span class="material-icons">sentiment_satisfied_alt</span>
-                    </div>
-                    <input class="input-right" type="text" placeholder="scrivi un messaggio...">
-                    <div class="btn btn--opaque" role="button">
-                        <span class="material-icons">mic</span>
+                    <div class="contact-info">
+                        <h3>
+                            <span class="contact-name">Fabio</span>
+                            <span class="time f-right">
+                                20/03/2020 16:35:00
+                            </span>
+                        </h3>
+                        <small>Mi piacerebbe ma devo andare a ...</small>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- /contenitore sx -->
+        <!-- contenitore dx -->
+        <div class="right">
+            <div class="header-right">
+                <div class="header-right-logo">
+                    <img src="img/avatar_2.jpg" alt="Michele">
+                    <h3><span id="header-right-contact-name">Michele</span> <br> <small class="time">Ultimo accesso oggi
+                            alle</small></h3>
+                </div>
+                <div class="header-right-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="right-messages-container">
+                <div class="right-messages">
+                    <div class='message sent'>
+                        <span class="message-text">Ciao come stai?</span>
+                        <span class="message-time">20/03/2020 16:30:00</span>
+                        <i class="fa fa-chevron-down f-right message-options"></i>
+                        <div class="message-options-panel" style="display: none;">
+                            <div class="message-info">Info messaggio</div>
+                            <div class="message-destroy">Cancella messaggio</div>
+                        </div>
+                    </div>
+
+                    <div class='message received'>
+                        <span class="message-text">Bene grazie! Stasera ci vediamo?</span>
+                        <span class="message-time">20/03/2020 16:30:55</span>
+                        <i class="fa fa-chevron-down f-right message-options"></i>
+                        <div class="message-options-panel" style="display: none;">
+                            <div class="message-info">Info messaggio</div>
+                            <div class="message-destroy">Cancella messaggio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="right-footer-icon f-left">
+                    <i class="far fa-smile"></i>
+                </div>
+                <input class="new-message-inputs" placeholder="Scrivi un messaggio">
+                <div class="right-footer-icon f-right">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <!-- /contenitore dx -->
     </div>
 
+    <script src="main.js"></script>
+</body>
+
+</html>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
