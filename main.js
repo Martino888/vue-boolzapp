@@ -17,61 +17,115 @@ const app = new Vue({
     el: '#app',
     data: {
         activeIndex: 0,
-        profile: '',
-        profineUser: 
+        profileUser: 
         {
             nome : 'Martino',
             Image :"avatar_3.jpg",
             ora : '',
         },
-        contact: [
+        contacts: [
             {
                 nome : 'Michele',
                 Image :"avatar_1.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Fabio',
                 Image :"avatar_2.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Samuele',
                 Image :"avatar_3.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Alessandro B.',
                 Image :"avatar_4.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Alessandro L.',
                 Image :"avatar_5.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Claudia',
                 Image :"avatar_6.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Federico',
                 Image :"avatar_7.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
             {
                 nome : 'Davide',
                 Image :"avatar_8.jpg",
                 accesso : 'Ultimo messaggio inviato',
                 ora : '',
+                messaggis:[{
+                    text:'pwdojèjqwdfjw',
+                    data: '12/12/2012',
+                    inviato: true,
+
+                }]
             },
         ]
-    }});
+    },
+    methods: {
+        changeCurrentChat(index) {
+            this.activeIndex = index;
+        }
+    }
+
+});
