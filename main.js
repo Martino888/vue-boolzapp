@@ -22,6 +22,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activeIndex: 0,
+        cerca: '',
         textUser: '',
         profileUser: {
             nome: 'Martino',
@@ -33,6 +34,7 @@ const app = new Vue({
                 Image: "avatar_1.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                         text: 'ciao',
                         data: '12/12/2012',
@@ -43,6 +45,8 @@ const app = new Vue({
                         text: 'prova',
                         data: '12/12/2012',
                         inviato: true,
+                        menu: false,
+                        
                     }
                 ]
             },
@@ -51,6 +55,7 @@ const app = new Vue({
                 Image: "avatar_2.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'come stai',
                     data: '12/12/2012',
@@ -63,10 +68,12 @@ const app = new Vue({
                 Image: "avatar_3.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'hey',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
             {
@@ -74,10 +81,12 @@ const app = new Vue({
                 Image: "avatar_4.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'hola',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
             {
@@ -85,10 +94,12 @@ const app = new Vue({
                 Image: "avatar_5.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'ci sei',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
             {
@@ -96,10 +107,12 @@ const app = new Vue({
                 Image: "avatar_6.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'buon giorno',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
             {
@@ -107,10 +120,12 @@ const app = new Vue({
                 Image: "avatar_7.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'buona notte',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
             {
@@ -118,10 +133,12 @@ const app = new Vue({
                 Image: "avatar_8.jpg",
                 accesso: 'Ultimo messaggio inviato',
                 ora: '',
+                filtro: true,
                 messaggis: [{
                     text: 'arrivederci',
                     data: '12/12/2012',
                     inviato: true,
+                    menu: false,
                 }]
             },
         ]
@@ -147,7 +164,8 @@ const app = new Vue({
                     this.contacts[trova].messaggis.push({
                         text: message,
                         data: '12/12/2012',
-                        inviato: false
+                        inviato: false,
+                        menu: false,
                     });
                 },1000)
             }
@@ -155,6 +173,15 @@ const app = new Vue({
         blockPanel(index) {
             console.log(this.contacts[this.activeIndex].messaggis[index].menu )
             this.contacts[this.activeIndex].messaggis[index].menu = !this.contacts[this.activeIndex].messaggis[index].menu 
+        },
+        cercaNome(){
+            this.contacts.forEach(element => {
+                if(element.nome.toLowerCase().includes(this.cerca.toLowerCase())){
+                    element.filtro = true;
+                }else{
+                    element.filtro = false;
+                }
+            });
         },
     }
 
