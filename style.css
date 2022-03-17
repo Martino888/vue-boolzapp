@@ -298,6 +298,8 @@ body {
 
 .right .right-messages .message .message-options-panel {
     position: absolute;
+    display: none;
+    z-index: 1000;
     right: 0;
     bottom: -75px;
     width: 150px;
@@ -367,4 +369,9 @@ body {
     text-align: center;
     font-size: 25px;
     color: #6B7376;
+}
+
+.time2{
+    color: grey;
+    margin-top: auto;
 }
