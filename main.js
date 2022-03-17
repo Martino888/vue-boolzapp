@@ -12,7 +12,7 @@
 // Milestone 4
 // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 // Milestone 5
-// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
+// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato 
 // Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 // Pensate bene a come strutturare i dati prima di implementare il codice.
 
@@ -33,6 +33,7 @@ const app = new Vue({
                 nome: 'Michele',
                 Image: "avatar_1.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-03-17T20:32:33',
                 ora: '',
                 filtro: true,
                 messaggis: [{
@@ -54,11 +55,12 @@ const app = new Vue({
                 nome: 'Fabio',
                 Image: "avatar_2.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-04-17T10:32:32',
                 ora: '',
                 filtro: true,
                 messaggis: [{
                     text: 'come stai',
-                    data: '12/12/2012',
+                    data: '12/12/2013',
                     inviato: true,
                     menu: false,
                 }]
@@ -67,6 +69,7 @@ const app = new Vue({
                 nome: 'Samuele',
                 Image: "avatar_3.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-05-19T20:32:33',
                 ora: '',
                 filtro: true,
                 messaggis: [{
@@ -80,6 +83,7 @@ const app = new Vue({
                 nome: 'Alessandro B.',
                 Image: "avatar_4.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-07-17T20:33:43',
                 ora: '',
                 filtro: true,
                 messaggis: [{
@@ -93,6 +97,7 @@ const app = new Vue({
                 nome: 'Alessandro L.',
                 Image: "avatar_5.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-03-15T20:32:33',
                 ora: '',
                 filtro: true,
                 messaggis: [{
@@ -106,11 +111,12 @@ const app = new Vue({
                 nome: 'Claudia',
                 Image: "avatar_6.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-03-09T20:42:31',
                 ora: '',
                 filtro: true,
                 messaggis: [{
                     text: 'buon giorno',
-                    data: '12/12/2012',
+                    data: '11/10/2012',
                     inviato: true,
                     menu: false,
                 }]
@@ -119,11 +125,12 @@ const app = new Vue({
                 nome: 'Federico',
                 Image: "avatar_7.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-03-04T20:55:33',
                 ora: '',
                 filtro: true,
                 messaggis: [{
                     text: 'buona notte',
-                    data: '12/12/2012',
+                    data: '11/12/2012',
                     inviato: true,
                     menu: false,
                 }]
@@ -132,11 +139,12 @@ const app = new Vue({
                 nome: 'Davide',
                 Image: "avatar_8.jpg",
                 accesso: 'Ultimo messaggio inviato',
+                formatData:'2022-03-13T20:39:33',
                 ora: '',
                 filtro: true,
                 messaggis: [{
                     text: 'arrivederci',
-                    data: '12/12/2012',
+                    data: '12/06/2012',
                     inviato: true,
                     menu: false,
                 }]
@@ -183,6 +191,10 @@ const app = new Vue({
                 }
             });
         },
+        getFormattedData(data) {
+            let formatStr = 'dd/MM/yyyy HH:mm:ss';
+            return luxon.DateTime.fromISO(data).toFormat(formatStr);
+        }
     }
 
 });

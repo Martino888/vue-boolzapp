@@ -49,7 +49,7 @@
                         <h3>
                             <span class="contact-name">{{contact.nome}}</span>
                             <span class="time f-right">
-                                10/01/2020 16:15:22
+                            {{getFormattedData(contact.formatData)}}
                             </span>
                         </h3>
                         <small>Tutto fatto! ...</small>
@@ -66,7 +66,7 @@
                     <h3>
                         <span id="header-right-contact-name">{{contacts[activeIndex].nome}}</span>
                         <br>
-                        <small class="time2"> Ultimo accesso oggi alle </small>
+                        <small class="time2"> Ultimo accesso oggi alle 12:00 </small>
                     </h3> 
                 </div> 
                 
@@ -101,6 +101,7 @@
         </div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2/build/global/luxon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
