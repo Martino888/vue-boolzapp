@@ -38,13 +38,13 @@ const app = new Vue({
                 filtro: true,
                 messaggis: [{
                         text: 'ciao',
-                        data: '12/12/2012',
+                        data: '2022-03-17T20:32:33',
                         inviato: true,
                         menu: false,
                     },
                     {
                         text: 'prova',
-                        data: '12/12/2012',
+                        data: '2022-03-17T20:32:33',
                         inviato: true,
                         menu: false,
                         
@@ -60,7 +60,7 @@ const app = new Vue({
                 filtro: true,
                 messaggis: [{
                     text: 'come stai',
-                    data: '12/12/2013',
+                    data: '2022-04-17T10:32:32',
                     inviato: true,
                     menu: false,
                 }]
